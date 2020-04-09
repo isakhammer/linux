@@ -59,15 +59,15 @@ function install_setup() {
 function install_pipeline() {
 	mkdir -p ~/catkin_rdv/src
 	cd ~/catkin_rdv && catkin_make
-	echo "source ~/catkin_rdv/devel/setup.bash" >> ~/.bashrc
-	source ~/.bashrc
-	cd ~/catkin_rdv/src && git clone git@github.com:RevolveNTNU/rdv_pipeline.git && cd rdv_pipeline
+
+	cd ~/catkin_rdv/src; git clone git@github.com:RevolveNTNU/rdv_pipeline.git
+
+    cd rdv_pipeline
 	#git checkout dev
-	git checkout feature/missions
+	git checkout origin/feature/missions
 	git submodule update --init --recursive
 	chmod +x scripts/install_dependencies.sh && ./scripts/install_dependencies.sh
 }
-
 
 
 sudo apt update
