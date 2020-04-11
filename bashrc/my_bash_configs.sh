@@ -53,8 +53,11 @@ alias ex="execute_cmd_in_background"
 # Kill running cmnds
 alias kex="kill_running_cmds; echo jobs"
 
-# Alias to access vim_runtime quick
-alias rt="cd ~/.vim_runtime/"
+# Alias to quick access linux runtime
+alias lrt="cd ~/.linux_runtime/"
+
+# Alias to quick access vim_runtime
+alias vrt="cd ~/.vim_runtime/"
 
 # rdv aliases
 alias cm="cd ~/catkin_rdv && catkin_make; cd -"
