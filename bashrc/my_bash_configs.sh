@@ -33,10 +33,10 @@ set -o vi
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 
 # Alias for editing personal bash configs
-alias mysh="vim ~/.vim_runtime/custom/my_bash_configs.sh"
+alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"
 
 # Alias for editing programs installation.
-alias myprgms="vim ~/.vim_runtime/install/install_programs.sh"
+alias myprgms="vim ~/.linux_runtime/install/ubuntu/install_programs.sh"
 
 # Alias for editing bashrc
 alias shrc="vim ~/.bashrc"
