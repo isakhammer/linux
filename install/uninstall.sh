@@ -7,5 +7,3 @@ source ~/.bashrc
 
 cd ~
 rm -Rf ~/.linux_runtime
-git clone --depth=1 https://github.com/isakhammer/linux.git ~/.linux_runtime
-source ~/linux/install/ubuntu/install_ubuntu_setup.sh
