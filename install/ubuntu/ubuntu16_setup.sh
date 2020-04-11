@@ -75,10 +75,6 @@ sudo apt upgrade
 
 # Install essentials
 sudo apt install -y vim git chromium-browser
-sudo apt install snapd
-sudo snap install slack --classic
-snap install spotify
-
 
 EMAIL="isakhammer@gmail.com"
 git config --global user.email $EMAIL
