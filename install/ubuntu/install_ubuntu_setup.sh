@@ -47,3 +47,6 @@ bash ~/.linux_runtime/install/ubuntu/install_programs.sh
 bash ~/.linux_runtime/install/install_bashrc.sh
 #bash ~/.linux_runtime/install/install_ros.sh
 
+# Vimrc
+git clone --depth=1 https://github.com/isakhammer/vimrc.git ~/.vim_runtime
+bash ~/.vim_runtime/install/install_awesome_vimrc.sh
