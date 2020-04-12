@@ -48,6 +48,9 @@ alias c="clear"
 alias s="source ~/.bashrc"
 
 # Alias for executing in background
+alias p3="python3"
+
+# Alias for executing in background
 alias ex="execute_cmd_in_background"
 
 # Kill running cmnds
