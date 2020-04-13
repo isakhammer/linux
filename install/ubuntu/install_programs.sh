@@ -1,6 +1,8 @@
 sudo apt install cowsay
 sudo apt install freecad
 sudo apt install snapd
+sudo apt install tmux
+sudo apt install okular
 snap install googler
 snap install discord
 snap install spotify
@@ -13,7 +15,6 @@ sudo apt-get --assume-yes install latexmk
 sudo apt-get --assume-yes install python3
 sudo apt-get --assume-yes install python3-pip
 pip install --upgrade pip
-
 sudo apt install docker.io
 # According to some sources said that this was necessary to install docker
 #sudo usermod -aG docker ${USER}
