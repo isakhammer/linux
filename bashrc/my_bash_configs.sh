@@ -28,6 +28,11 @@
      for i in $(jobs -pr); do kill -9 $i; done;
  }
 
+ function git_commit()  {
+     array="${@}"
+     git commit -m"$array"
+ }
+
 # Welcome text
 cowsay Get started $(whoami)
 
@@ -69,7 +74,7 @@ alias gq="git stash"
 alias gs="git status"
 alias ga="git add ."
 alias gap="git add -p"
-alias gc="git commit -m"
+alias gc="git_commit" # custom function
 alias gp="git push origin HEAD"
 
 # Personal aliases
