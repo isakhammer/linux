@@ -1,3 +1,4 @@
+#!/bin/bash
 
 function install_ros() {
 	# Setup your sources.list
@@ -15,6 +16,11 @@ function install_ros() {
 	sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 	sudo rosdep init
 	rosdep update
+
+    # Install compilers
+    sudo add-apt-repository ppa:jonathonf/gcc-7.1
+    sudo apt-get update
+    sudo apt-get install gcc-7 g++-7
 }
 
 function install_pipeline() {
@@ -30,3 +36,4 @@ function install_pipeline() {
 	chmod +x scripts/install_dependencies.sh && ./scripts/install_dependencies.sh
 }
 
+install_ros
