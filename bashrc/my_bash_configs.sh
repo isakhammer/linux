@@ -68,6 +68,11 @@ function git_commit()  {
     git commit -m"$array"
 }
 
+function git_stash_pop()  {
+    arg=$1
+    git stash pop stash@{$arg}
+}
+
 # Welcome text
 cowsay Get started $(whoami)
 
@@ -111,6 +116,9 @@ alias gd="git diff"
 alias gqp="git stash pop"
 alias gq="git stash"
 alias gs="git status"
+alias gb="git branch"
+alias gch="git checkout"
+alias gchb="git checkout -b"
 alias ga="git add"
 alias gap="git add -p"
 alias gc="git_commit" # custom function
