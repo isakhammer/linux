@@ -113,6 +113,10 @@ alias zat="zathura"
 # Open google chrome
 alias chrome="chromium-browser"
 
+# ssh
+alias ssh_local='ssh localhost'
+alias ifc='ifconfig'
+
 # Git aliases
 alias gl="git log"
 alias gd="git diff"

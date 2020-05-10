@@ -1,7 +1,6 @@
 sudo apt install cowsay
 sudo apt install freecad
 sudo apt install snapd
-sudo apt install tmux
 sudo apt install okular
 snap install googler
 snap install discord
