@@ -50,13 +50,7 @@ function kill_running_cmds() {
 
 
 
-# function git_add()  {
-#     array="${@}"
-#     [ -z "$array"] && array="."
-
-#     echo "$array"
-#     git add $array
-# }
+# GIT FUNCTIONS
 
 function git_clone_recursive()  {
     arg=$1
@@ -73,8 +67,17 @@ function git_stash_pop()  {
     git stash pop stash@{$arg}
 }
 
-# Welcome text
+function get_file_from_commit() {
+    commit_id=$1
+    file_path=$2
+    git checkout $commit_id -- $file_path
+}
+
+
+# WELCOME TEXT
 cowsay Get started $(whoami)
+
+# ALIASES
 
 # Starting vim mode in terminal
 set -o vi
