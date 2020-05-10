@@ -33,7 +33,8 @@ function install_pipeline() {
 	#git checkout dev
 	git checkout origin/feature/missions
 	git submodule update --init --recursive
-	chmod +x scripts/install_dependencies.sh && ./scripts/install_dependencies.sh
+    cd scripts
+	chmod +x install_dependencies.sh && install_dependencies.sh
 }
 
 install_ros
