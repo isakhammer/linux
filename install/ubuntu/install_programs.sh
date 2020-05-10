@@ -9,6 +9,7 @@ snap install spotify
 snap install htop
 sudo snap install slack --classic
 
+
 sudo apt-get --assume-yes install zathura
 sudo apt-get --assume-yes install xdotool
 sudo apt-get --assume-yes install latexmk
@@ -21,3 +22,6 @@ sudo apt install docker.io
 #su - ${USER}
 
 
+# ssh connection
+sudo apt-get install openssh-client
+sudo apt-get install openssh-server
