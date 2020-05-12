@@ -30,11 +30,12 @@ function install_pipeline() {
 	cd ~/catkin_rdv/src; git clone git@github.com:RevolveNTNU/rdv_pipeline.git
 
     cd rdv_pipeline
-	#git checkout dev
-	git checkout origin/feature/missions
+	git checkout origin/dev
+	#git checkout origin/feature/missions
 	git submodule update --init --recursive
     cd scripts
-	chmod +x install_dependencies.sh && install_dependencies.sh
+	chmod +x install_dependencies.sh && ./install_dependencies.sh
 }
 
-install_ros
+#install_ros
+install_pipeline
