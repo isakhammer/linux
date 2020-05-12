@@ -17,6 +17,7 @@ function generate_ssh_key() {
 
 	# Opens up ssh key settings
 	chromium-browser https://github.com/settings/ssh/new
+    ssh-add
 }
 
 function set_git_credential() {
