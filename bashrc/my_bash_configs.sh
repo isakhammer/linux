@@ -129,6 +129,7 @@ alias gchb="git checkout -b"
 alias ga="git add"
 alias gap="git add -p"
 alias gc="git_commit" # custom function
+alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
 
 # Personal aliases
@@ -136,10 +137,16 @@ alias sensitivities="mkdir sensitivities && cp sensitivity_*/*.png sensitivities
 alias cm="cd ~/catkin_rdv && catkin_make; cd -"
 alias cm_test="cd ~/catkin_rdv && catkin_make run_tests_rdv_launch; cd -"
 
-alias traj="cd ~/rdv_trajectory"
+alias traj="cd ~/trajectory_optimization"
 alias research="cd ~/research"
 alias lrt="cd ~/.linux_runtime/"
 alias vrt="cd ~/.vim_runtime/"
+alias ideas="cd ~/ideas"
+alias catkin="cd ~/catkin_rdv"
+alias pipeline="cd ~/catkin_rdv/src/rdv_pipeline"
+alias 4cd="cd ..;cd ..;cd ..;cd ..;"
+alias 3cd="cd ..;cd ..;cd ..;"
+alias 2cd="cd ..;cd ..;"
 
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"
