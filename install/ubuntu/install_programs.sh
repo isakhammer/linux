@@ -12,6 +12,7 @@ sudo snap install slack --classic
 sudo apt-get --assume-yes install zathura
 sudo apt-get --assume-yes install xdotool
 sudo apt-get --assume-yes install latexmk
+sudo apt-get --assume-yes install ranger
 sudo apt-get --assume-yes install python3
 sudo apt-get --assume-yes install python3-pip
 pip install --upgrade pip
