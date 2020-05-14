@@ -117,6 +117,11 @@ alias chrome="chromium-browser"
 alias ssh_local='ssh localhost'
 alias ifc='ifconfig'
 
+# cd aliases
+alias 4cd="cd ..;cd ..;cd ..;cd ..;"
+alias 3cd="cd ..;cd ..;cd ..;"
+alias 2cd="cd ..;cd ..;"
+
 # Git aliases
 alias gl="git log"
 alias gd="git diff"
@@ -132,26 +137,30 @@ alias gc="git_commit" # custom function
 alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
 
-# Personal aliases
-alias sensitivities="mkdir sensitivities && cp sensitivity_*/*.png sensitivities/"
+# revolve shortcuts
 alias cm="cd ~/catkin_rdv && catkin_make; cd -"
 alias cm_test="cd ~/catkin_rdv && catkin_make run_tests_rdv_launch; cd -"
-
-alias traj="cd ~/trajectory_optimization"
-alias research="cd ~/research"
-alias lrt="cd ~/.linux_runtime/"
-alias vrt="cd ~/.vim_runtime/"
-alias ideas="cd ~/ideas"
-alias revolve="cd ~/ideas/revolve"
 alias catkin="cd ~/catkin_rdv"
 alias pipeline="cd ~/catkin_rdv/src/rdv_pipeline"
-alias 4cd="cd ..;cd ..;cd ..;cd ..;"
-alias 3cd="cd ..;cd ..;cd ..;"
-alias 2cd="cd ..;cd ..;"
+alias traj="cd ~/trajectory_optimization"
 
-alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
+# research shortcuts
+alias research="cd ~/research"
+alias math="cd ~/research/mathematics"
+
+# idea shortcuts
+alias ideas="cd ~/ideas"
+alias jokes="cd ~/ideas/tinder"
+alias revolve="cd ~/ideas/revolve"
+
+# Linux runtime shortcuts
 alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"
 alias myprgms="vim ~/.linux_runtime/install/ubuntu/install_programs.sh"
+alias lrt="cd ~/.linux_runtime/"
+
+# Vim runtime shortcuts
+alias vrt="cd ~/.vim_runtime/"
+alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 
 alias update="sudo apt-get update"
 
