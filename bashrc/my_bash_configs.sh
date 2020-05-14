@@ -1,5 +1,76 @@
 #!/bin/bash
 
+function install_plugin()  {
+   cd ~/.vim_runtime/my_plugins
+   ssh_key=$1
+
+   # Get name from ssh key
+   echo "$ssh_key">tmp_ssh_key.txt
+   vim -s ~/.vim_runtime/custom/get_ssh_name.txt tmp_ssh_key.txt
+   read -r ssh_name<tmp_ssh_key.txt
+   rm -Rf tmp_ssh_key.txt
+
+   # clone plugin
+   git clone $ssh_key $ssh_name
+}
+
+
+
+
+########################
+#### LINUX          ####
+########################
+
+# welcome text
+cowsay Get started $(whoami)
+
+# Starting vim mode in terminal
+set -o vi
+
+# Alias for editing bashrc
+alias shrc="vim ~/.bashrc"
+
+# Alias for cleaning terminal.
+alias c="clear"
+
+# Alias for sourcing bashrc
+alias s="source ~/.bashrc"
+
+# Alias for rescursive grep.
+function grep_recursive() {
+   arg=$1
+   grep -R $arg . -n
+}
+alias grepr="grep_recursive"
+
+# Alias for executing in background
+alias p3="python3"
+
+alias sudo_upgrade="sudo apt-get upgrade"
+alias sudo_update="sudo apt-get update"
+
+# executing and killing processes
+function execute_cmd_in_background()  {
+    array="${@}"
+    eval $array 1> /dev/null &
+}
+
+function kill_running_cmds() {
+    for i in $(jobs -pr); do kill -9 $i; done;
+}
+
+alias ex="execute_cmd_in_background"
+alias kex="kill_running_cmds; echo jobs"
+
+# ssh
+alias ssh_local='ssh localhost'
+alias ifc='ifconfig'
+
+# cd aliases
+alias 4cd="cd ..;cd ..;cd ..;cd ..;"
+alias 3cd="cd ..;cd ..;cd ..;"
+alias 2cd="cd ..;cd ..;"
+
 # Changing delimiter of csv file
 # $1: file with , delimiter
 # $2: new filename with ; delimiter
@@ -18,40 +89,24 @@ function change_delimiter(){
     sed 's/,/;/g' $file > $new_file
 }
 
+########################
+#### PROGRAMS       ####
+########################
+
+# Pdf managers
+alias oku="okular"
+alias zat="zathura"
+
+# File mangagers
+alias ran='ranger'
+alias ran_custom='ranger --copy-config=all'
+alias ran_config='cd ~/.config/ranger'
+
+# Open google chrome
+alias chrome="chromium-browser"
 
 
-function install_plugin()  {
-   cd ~/.vim_runtime/my_plugins
-   ssh_key=$1
-
-   # Get name from ssh key
-   echo "$ssh_key">tmp_ssh_key.txt
-   vim -s ~/.vim_runtime/custom/get_ssh_name.txt tmp_ssh_key.txt
-   read -r ssh_name<tmp_ssh_key.txt
-   rm -Rf tmp_ssh_key.txt
-
-   # clone plugin
-   git clone $ssh_key $ssh_name
-}
-
-function execute_cmd_in_background()  {
-    array="${@}"
-    eval $array 1> /dev/null &
-}
-
-function grep_recursive() {
-   arg=$1
-   grep -R $arg . -n
-}
-
-function kill_running_cmds() {
-    for i in $(jobs -pr); do kill -9 $i; done;
-}
-
-
-
-# GIT FUNCTIONS
-
+# git
 function git_clone_recursive()  {
     arg=$1
     git clone $arg --recurse-submodules
@@ -73,56 +128,6 @@ function get_file_from_commit() {
     git checkout $commit_id -- $file_path
 }
 
-
-# WELCOME TEXT
-cowsay Get started $(whoami)
-
-# ALIASES
-
-# Starting vim mode in terminal
-set -o vi
-
-# Alias for editing bashrc
-alias shrc="vim ~/.bashrc"
-
-# Alias for cleaning terminal.
-alias c="clear"
-
-# Alias for sourcing bashrc
-alias s="source ~/.bashrc"
-
-# Alias for rescursive grep.
-alias grepr="grep_recursive"
-
-# Alias for executing in background
-alias p3="python3"
-
-alias sudo_upgrade="sudo apt-get upgrade"
-alias sudo_update="sudo apt-get update"
-
-# Alias for executing in background
-alias ex="execute_cmd_in_background"
-
-# Kill running cmnds
-alias kex="kill_running_cmds; echo jobs"
-
-# Pdf managers
-alias oku="okular"
-alias zat="zathura"
-
-# Open google chrome
-alias chrome="chromium-browser"
-
-# ssh
-alias ssh_local='ssh localhost'
-alias ifc='ifconfig'
-
-# cd aliases
-alias 4cd="cd ..;cd ..;cd ..;cd ..;"
-alias 3cd="cd ..;cd ..;cd ..;"
-alias 2cd="cd ..;cd ..;"
-
-# Git aliases
 alias gl="git log"
 alias gd="git diff"
 alias gqp="git stash pop"
@@ -136,6 +141,10 @@ alias gap="git add -p"
 alias gc="git_commit" # custom function
 alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
+
+########################
+#### PERSONAL       ####
+########################
 
 # revolve shortcuts
 alias cm="cd ~/catkin_rdv && catkin_make; cd -"
@@ -162,5 +171,4 @@ alias lrt="cd ~/.linux_runtime/"
 alias vrt="cd ~/.vim_runtime/"
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 
-alias update="sudo apt-get update"
 
