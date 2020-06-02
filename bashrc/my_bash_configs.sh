@@ -15,8 +15,6 @@ function install_plugin()  {
 }
 
 
-
-
 ########################
 #### LINUX          ####
 ########################
@@ -24,16 +22,17 @@ function install_plugin()  {
 # welcome text
 cowsay Get started $(whoami)
 
-# Starting vim mode in terminal
+# vim mode in terminal
 set -o vi
+alias c="clear"
+
+# cd aliases
+alias 4cd="cd ..;cd ..;cd ..;cd ..;"
+alias 3cd="cd ..;cd ..;cd ..;"
+alias 2cd="cd ..;cd ..;"
 
 # Alias for editing bashrc
 alias shrc="vim ~/.bashrc"
-
-# Alias for cleaning terminal.
-alias c="clear"
-
-# Alias for sourcing bashrc
 alias s="source ~/.bashrc"
 
 # Alias for rescursive grep.
@@ -42,9 +41,6 @@ function grep_recursive() {
    grep -R $arg . -n
 }
 alias grepr="grep_recursive"
-
-# Alias for executing in background
-alias p3="python3"
 
 alias sudo_upgrade="sudo apt-get upgrade"
 alias sudo_update="sudo apt-get update"
@@ -66,10 +62,21 @@ alias kex="kill_running_cmds; echo jobs"
 alias ssh_local='ssh localhost'
 alias ifc='ifconfig'
 
-# cd aliases
-alias 4cd="cd ..;cd ..;cd ..;cd ..;"
-alias 3cd="cd ..;cd ..;cd ..;"
-alias 2cd="cd ..;cd ..;"
+# hardware
+alias disk_free="df"
+alias unmount_device="umount"
+
+# Make bootable usb
+# Examples
+# device: /dev/sdb1
+# iso_path: ~/Downloads/ubuntu-20.04-desktop-amd64.iso
+function create_bootable_usb(){
+  device=$1
+  iso_path=$2
+  umount $device
+  sudo dd bs=4M if=$iso_path of=$device status=progress oflag=sync
+
+}
 
 # Changing delimiter of csv file
 # $1: file with , delimiter
@@ -114,6 +121,8 @@ function reddit(){
 }
 alias chrome="chromium-browser"
 
+
+
 # docker
 alias docker_socket="sudo chmod 777 docker.sock"
 
@@ -153,6 +162,9 @@ alias gap="git add -p"
 alias gc="git_commit" # custom function
 alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
+
+# python
+alias p3="python3"
 
 ########################
 #### PERSONAL       ####
