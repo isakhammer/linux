@@ -96,6 +96,8 @@ function change_delimiter(){
 # Pdf managers
 alias oku="okular"
 alias zat="zathura"
+alias mir="mirage"
+alias invert_color='xcalib -invert -alter'
 
 # File mangagers
 alias ran='ranger'
@@ -103,7 +105,17 @@ alias ran_custom='ranger --copy-config=all'
 alias ran_config='cd ~/.config/ranger'
 
 # Open google chrome
+function reddit(){
+  news="https://www.reddit.com/r/news/"
+  physics="https://www.reddit.com/r/Physics/"
+  memes="https://www.reddit.com/r/memes/"
+  public_f="https://www.reddit.com/r/PublicFreakOut/"
+  chromium-browser $news $physics $memes $public_f
+}
 alias chrome="chromium-browser"
+
+# docker
+alias docker_socket="sudo chmod 777 docker.sock"
 
 
 # git
@@ -153,14 +165,26 @@ alias catkin="cd ~/catkin_rdv"
 alias pipeline="cd ~/catkin_rdv/src/rdv_pipeline"
 alias traj="cd ~/trajectory_optimization"
 
+alias control_td_pre="roslaunch rdv_launch simulator_control.launch TD_PRE:=1 rviz:=1"
+alias control_td="roslaunch rdv_launch simulator_control.launch TD:=1 rviz:=1"
+alias control_skidpad="roslaunch rdv_launch simulator_control.launch SKIDPAD:=1 rviz:=1"
+
+# hypertrophy project
+alias hyp="cd ~/hypertrophy_project"
+
 # research shortcuts
 alias research="cd ~/research"
 alias math="cd ~/research/mathematics"
+alias mathc="cd ~/research/mathematics/complex_analysis"
+alias mathd="cd ~/research/mathematics/dynamic_systems"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
-alias jokes="cd ~/ideas/tinder"
+alias chords="mirage ~/ideas/guitar/chords.png"
+alias note="vim ~/ideas/note.txt"
+alias jokes="cd ~/ideas/jokes"
 alias revolve="cd ~/ideas/revolve"
+alias tind="cd ~/ideas/tinder"
 
 # Linux runtime shortcuts
 alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"

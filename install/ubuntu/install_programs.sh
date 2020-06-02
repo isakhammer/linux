@@ -15,6 +15,7 @@ sudo apt-get --assume-yes install latexmk
 sudo apt-get --assume-yes install ranger
 sudo apt-get --assume-yes install python3
 sudo apt-get --assume-yes install python3-pip
+sudo apt-get --assume-yes install xcalib
 pip install --upgrade pip
 sudo apt install docker.io
 # According to some sources said that this was necessary to install docker
