@@ -2,6 +2,8 @@ sudo apt install cowsay
 sudo apt install freecad
 sudo apt install snapd
 sudo apt install okular
+sudo apt install gddrescue
+
 snap install googler
 snap install discord
 snap install spotify
@@ -26,3 +28,5 @@ sudo apt install docker.io
 # ssh connection
 sudo apt-get install openssh-client
 sudo apt-get install openssh-server
+
+

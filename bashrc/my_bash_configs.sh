@@ -73,8 +73,8 @@ alias unmount_device="umount"
 function create_bootable_usb(){
   device=$1
   iso_path=$2
-  umount $device
-  sudo dd bs=4M if=$iso_path of=$device status=progress oflag=sync
+
+  sudo ddrescue $iso_path $device --force -D
 
 }
 
