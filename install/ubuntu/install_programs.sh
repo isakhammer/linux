@@ -11,7 +11,7 @@ snap install htop
 sudo snap install slack --classic
 sudo snap install gitkraken --classic
 
-install_mirage(){
+function install_mirage(){
   mkdir ~/tmp_mirage
   cd ~/tmp_mirage
   wget http://security.ubuntu.com/ubuntu/pool/main/e/exiv2/libexiv2-14_0.25-4ubuntu2.2_amd64.deb
