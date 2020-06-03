@@ -11,7 +11,20 @@ snap install htop
 sudo snap install slack --classic
 sudo snap install gitkraken --classic
 
+install_mirage(){
+  mkdir ~/tmp_mirage
+  cd ~/tmp_mirage
+  wget http://security.ubuntu.com/ubuntu/pool/main/e/exiv2/libexiv2-14_0.25-4ubuntu2.2_amd64.deb
+  wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pyexiv2/python-pyexiv2_0.3.2-9_amd64.deb
+  wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
+  wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mirage/mirage_0.9.5.2-1_amd64.deb
 
+  sudo apt-get install ./*.deb
+  rm -Rf ~/tmp_mirage
+}
+
+
+install_mirage
 sudo apt-get --assume-yes install zathura
 sudo apt-get --assume-yes install xdotool
 sudo apt-get --assume-yes install latexmk
