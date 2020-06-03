@@ -9,6 +9,7 @@ snap install discord
 snap install spotify
 snap install htop
 sudo snap install slack --classic
+sudo snap install gitkraken --classic
 
 
 sudo apt-get --assume-yes install zathura
