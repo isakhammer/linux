@@ -202,6 +202,7 @@ alias tind="cd ~/ideas/tinder"
 alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"
 alias myprgms="vim ~/.linux_runtime/install/ubuntu/install_programs.sh"
 alias lrt="cd ~/.linux_runtime/"
+alias docker_notes="vim ~/.linux_runtime/docker/notes"
 
 # Vim runtime shortcuts
 alias vrt="cd ~/.vim_runtime/"

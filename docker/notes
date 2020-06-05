@@ -1,0 +1,8 @@
+
+# Check if VM is active
+dockermachine active
+
+
+# Ubuntu 16 image
+docker image pull ubuntu:16.04
+
