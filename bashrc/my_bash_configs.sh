@@ -31,6 +31,10 @@ alias 4cd="cd ..;cd ..;cd ..;cd ..;"
 alias 3cd="cd ..;cd ..;cd ..;"
 alias 2cd="cd ..;cd ..;"
 
+# reboot
+alias reboot="sudo reboot"
+alias log_out="gnome-session-quit"
+
 # Alias for editing bashrc
 alias shrc="vim ~/.bashrc"
 alias s="source ~/.bashrc"
@@ -124,6 +128,7 @@ alias chrome="chromium-browser"
 
 
 # docker
+alias docker='sudo docker'
 alias docker_socket="sudo chmod 777 docker.sock"
 
 
