@@ -23,8 +23,17 @@ function install_mirage(){
   rm -Rf ~/tmp_mirage
 }
 
+function install_vscode(){
+  sudo apt install software-properties-common apt-transport-https wget
+  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  sudo apt update
+  sudo apt install code
+}
+
 
 install_mirage
+install_vscode
 sudo apt-get --assume-yes install zathura
 sudo apt-get --assume-yes install xdotool
 sudo apt-get --assume-yes install latexmk
