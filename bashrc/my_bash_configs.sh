@@ -35,6 +35,9 @@ alias 2cd="cd ..;cd ..;"
 alias reboot="sudo reboot"
 alias log_out="gnome-session-quit"
 
+# Open program and continue in terminal
+alias setsid="setsid -f"
+
 # Alias for editing bashrc
 alias shrc="vim ~/.bashrc"
 alias s="source ~/.bashrc"
@@ -198,7 +201,9 @@ alias mathd="cd ~/research/mathematics/dynamic_systems"
 # idea shortcuts
 alias ideas="cd ~/ideas"
 alias chords="mirage ~/ideas/guitar/chords.png"
-alias note="vim ~/ideas/note.txt"
+alias notes="vim ~/ideas/notes"
+alias todo="vim ~/ideas/todo/day2day"
+alias todo_list="vim ~/ideas/todo"
 alias jokes="cd ~/ideas/jokes"
 alias revolve="cd ~/ideas/revolve"
 alias tind="cd ~/ideas/tinder"
@@ -213,4 +218,4 @@ alias docker_notes="vim ~/.linux_runtime/docker/notes"
 alias vrt="cd ~/.vim_runtime/"
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 
-
+alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
