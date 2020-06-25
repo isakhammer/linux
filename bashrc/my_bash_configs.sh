@@ -138,6 +138,20 @@ alias chrome="chromium-browser"
 alias docker='sudo docker'
 alias docker_socket="sudo chmod 777 /var/run/docker.sock"
 
+function run_melodica()  {
+
+  image_name="isakhammer/melodica:latest"
+  xhost +local:root
+  XSOCK=/tmp/.X11-unix
+  docker run -it --rm \
+     -e DISPLAY=$DISPLAY \
+      -v $XSOCK:$XSOCK \
+       -v $HOME/.Xauthority:/root/.Xauthority \
+        --privileged \
+        $image_name "$@"
+}
+
+
 
 # git
 function git_clone_recursive()  {
