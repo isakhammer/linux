@@ -9,6 +9,8 @@ snap install googler
 snap install discord
 snap install spotify
 snap install htop
+sudo snap install gimp
+sudo snap install kdenlive
 sudo snap install slack --classic
 sudo snap install gitkraken --classic
 
@@ -32,6 +34,14 @@ function install_vscode(){
   sudo apt install code
 }
 
+function install_anydesk(){
+  wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+  echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+
+  sudo apt update
+  sudo apt install anydesk
+}
+
 
 install_mirage
 install_vscode
@@ -39,6 +49,7 @@ sudo apt-get --assume-yes install zathura
 sudo apt-get --assume-yes install xdotool
 sudo apt-get --assume-yes install latexmk
 sudo apt-get --assume-yes install ranger
+sudo apt-get --assume-yes install i3
 sudo apt-get --assume-yes install python3
 sudo apt-get --assume-yes install python3-pip
 sudo apt-get --assume-yes install xcalib

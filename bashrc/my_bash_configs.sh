@@ -107,6 +107,12 @@ function change_delimiter(){
 #### PROGRAMS       ####
 ########################
 
+# Other
+alias image_editor="gimp"
+alias video_editor="kdenlive"
+alias cad_editor="freecad"
+alias anydesk="anydesk"
+
 # Pdf managers
 alias oku="okular"
 alias zat="zathura"
@@ -128,11 +134,9 @@ function reddit(){
 }
 alias chrome="chromium-browser"
 
-
-
 # docker
 alias docker='sudo docker'
-alias docker_socket="sudo chmod 777 docker.sock"
+alias docker_socket="sudo chmod 777 /var/run/docker.sock"
 
 
 # git
@@ -219,3 +223,4 @@ alias vrt="cd ~/.vim_runtime/"
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
 
 alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
+
