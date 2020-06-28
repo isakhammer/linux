@@ -20,7 +20,7 @@ function install_plugin()  {
 ########################
 
 # welcome text
-cowsay Get started $(whoami)
+neofetch
 
 # vim mode in terminal
 set -o vi
