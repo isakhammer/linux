@@ -143,7 +143,7 @@ function run_melodica()  {
   image_name="isakhammer/melodica:latest"
   xhost +local:root
   XSOCK=/tmp/.X11-unix
-  docker run -it --rm \
+  docker run -it \
      -e DISPLAY=$DISPLAY \
       -v $XSOCK:$XSOCK \
        -v $HOME/.Xauthority:/root/.Xauthority \
@@ -188,6 +188,7 @@ alias gap="git add -p"
 alias gc="git_commit" # custom function
 alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
+alias gpu="git pull"
 
 # python
 alias p3="python3"
@@ -195,6 +196,7 @@ alias p3="python3"
 ########################
 #### PERSONAL       ####
 ########################
+
 
 # revolve shortcuts
 alias cm="cd ~/catkin_rdv && catkin_make; cd -"
@@ -227,6 +229,7 @@ alias revolve="cd ~/ideas/revolve"
 alias tind="cd ~/ideas/tinder"
 
 # Linux runtime shortcuts
+alias ~="cd ~"
 alias mysh="vim ~/.linux_runtime/bashrc/my_bash_configs.sh"
 alias myprgms="vim ~/.linux_runtime/install/ubuntu/install_programs.sh"
 alias lrt="cd ~/.linux_runtime/"
