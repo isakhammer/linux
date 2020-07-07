@@ -112,6 +112,7 @@ alias image_editor="gimp"
 alias video_editor="kdenlive"
 alias cad_editor="freecad"
 alias anydesk="anydesk"
+alias termdown="termdown"
 
 # Pdf managers
 alias oku="okular"
@@ -238,6 +239,7 @@ alias docker_notes="vim ~/.linux_runtime/docker/notes"
 # Vim runtime shortcuts
 alias vrt="cd ~/.vim_runtime/"
 alias myvim="vim ~/.vim_runtime/custom/my_vim_configs.vim"
+alias ohana="ssh ohana@129.241.64.225"
 
 alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
 
