@@ -1,3 +1,5 @@
+sudo apt install vim
+
 sudo apt install cowsay
 sudo apt install neofetch
 sudo apt install freecad
