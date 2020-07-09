@@ -178,7 +178,7 @@ function get_file_from_commit() {
     file_path=$2
     git checkout $commit_id -- $file_path
 }
-function set_global_user() {
+function set_git_global_user() {
     email=$1
     git config --global user.email "$email"
 }
