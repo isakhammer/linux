@@ -48,14 +48,15 @@ function install_anydesk(){
 
 install_mirage
 install_vscode
-sudo apt-get --assume-yes install zathura
-sudo apt-get --assume-yes install xdotool
-sudo apt-get --assume-yes install latexmk
-sudo apt-get --assume-yes install ranger
-sudo apt-get --assume-yes install i3
-sudo apt-get --assume-yes install python3
-sudo apt-get --assume-yes install python3-pip
-sudo apt-get --assume-yes install xcalib
+
+sudo apt-get install -y zathura
+sudo apt-get install -y xdotool
+sudo apt-get install -y latexmk
+sudo apt-get install -y ranger
+sudo apt-get install -y i3
+sudo apt-get install -y python3
+sudo apt-get install -y python3-pip
+sudo apt-get install -y xcalib
 pip install --upgrade pip
 sudo apt install docker.io
 # According to some sources said that this was necessary to install docker
