@@ -47,10 +47,13 @@ function grep_recursive() {
    arg=$1
    grep -R $arg . -n
 }
+
 alias grepr="grep_recursive"
 
 alias sudo_upgrade="sudo apt-get upgrade"
 alias sudo_update="sudo apt-get update"
+alias update_browser="sudo update-alternatives --config x-www-browser"
+
 
 # executing and killing processes
 function execute_cmd_in_background()  {
