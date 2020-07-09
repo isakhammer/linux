@@ -6,6 +6,7 @@ sudo apt install freecad
 sudo apt install snapd
 sudo apt install okular
 sudo apt install gddrescue
+sudo apt install i3
 
 snap install googler
 snap install discord
