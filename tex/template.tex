@@ -13,13 +13,25 @@
 \usepackage{mathtools}
 \usepackage{enumerate} 
 
+% inscape-figures
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 
 
-%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
