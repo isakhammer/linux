@@ -290,3 +290,4 @@ alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
 
 # vim
 alias texsnip='vim ~/.vim_runtime/custom/snippets/tex.snippets'
+alias tex_template='cp ~/.linux_runtime/tex/template.tex .'
