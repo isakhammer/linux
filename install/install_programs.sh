@@ -8,14 +8,10 @@ sudo apt install okular
 sudo apt install gddrescue
 sudo apt install i3
 
-snap install googler
-snap install discord
-snap install spotify
-snap install htop
-sudo snap install gimp
-sudo snap install kdenlive
-sudo snap install slack --classic
-sudo snap install gitkraken --classic
+snap install googler discord spotify htop gimp kdenlive
+snap install slack --classic
+snap install gitkraken --classic
+snap install kdekden
 
 function install_mirage(){
   mkdir ~/tmp_mirage
