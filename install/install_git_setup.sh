@@ -25,8 +25,8 @@ function set_git_credential() {
     # Setup git credential
     sudo apt-get install libsecret-1-0 libsecret-1-dev
     sudo mkdir /usr/share/doc/git/contrib/credential/libsecret
-    sudo cp ~/.linux_runtime/install/ubuntu/Makefile /usr/share/doc/git/contrib/credential/libsecret/
-    sudo cp ~/.linux_runtime/install/ubuntu/git-credential-libsecret.c /usr/share/doc/git/contrib/credential/libsecret
+    sudo cp ~/.linux_runtime/install/Makefile /usr/share/doc/git/contrib/credential/libsecret/
+    sudo cp ~/.linux_runtime/install/git-credential-libsecret.c /usr/share/doc/git/contrib/credential/libsecret
     cd /usr/share/doc/git/contrib/credential/libsecret
     git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
     sudo make
