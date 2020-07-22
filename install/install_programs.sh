@@ -46,6 +46,7 @@ function install_anydesk(){
 }
 
 
+
 install_mirage
 install_vscode
 
@@ -69,3 +70,10 @@ sudo apt-get install openssh-client
 sudo apt-get install openssh-server
 
 
+function install_npm(){
+  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  npm install --save-dev electron
+}
+
+install_npm

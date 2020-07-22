@@ -232,7 +232,7 @@ function i3exit(){
 	        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
 	        exit 2
 	esac
-	
+
 	exit 0
 }
 
@@ -291,3 +291,7 @@ alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
 # vim
 alias texsnip='vim ~/.vim_runtime/custom/snippets/tex.snippets'
 alias tex_template='cp ~/.linux_runtime/tex/template.tex .'
+
+
+#javascript
+alias npm_init="npm init"
