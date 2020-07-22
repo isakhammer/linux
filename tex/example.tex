@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Linear Methods Notes}
+\author{isakhammer }
+\date{July 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{enumerate} 
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+
+
+%\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+
+\begin{figure}[ht]
+    \centering
+    \incfig{something}
+    \caption{something}
+    \label{fig:something}
+\end{figure}
+
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Sequences in metric spaces and normed spaces}
+
+\begin{definition} {Sequences in metric space}
+Let \( (X,d) \) be a metric space. A sequence \( (x_n)_{n \in \mathbb{N}} \) in \( X \) is said to \textbf{converge to} \( x \in X \) if for every \(\epsilon > 0 \) once can find $N = N(\epsilon) \in \mathbb{N}$ such that
+
+ \begin{equation}
+   C = d(x_n,x) < \epsilon
+\end{equation}
+
+whenever $n \geq N$. The element $x$ is called the \textbf{limit} of the sequence $(x_n)_{n \in \mathbb{N}}$.
+
+In particular, if $(X, \norm{.})$ is a normed space, then $(x_n)_{n \in \mathbb{N}}$ converges to $x \in X$ if for every $\epsilon > 0$ once can find $N = N(\epsilon) \in N $ such that 
+
+\begin{equation}
+    \norm{x - x_n} < \epsilon
+\end{equation}
+
+whenever $n \geq N$.
+\end{definition}
+
+
+\begin{proposition}{Properties}
+
+Supposed that the sequence $(x_n)_{n \in \mathbf{N}} $ in the normed space $(X, \norm{.})$ is convergent. 
+\begin{enumerate}[(i)]
+\item The limit $x \ in X$ of the sequence $(x_n)_{n \in \mathbf{N}}$ is unique.
+\item The norm of $x_n$ converges to the norm of $x$,
+    \begin{equation}
+        \abs{\norm{x} - \norm{x_n}  } \rightarrow  0
+    \end{equation}
+
+\end{enumerate}
+
+
+\end{proposition}
+
+
+\begin{proof}
+
+\begin{enumerate} [(i)]
+    \item
+        Suppose there exist limits $x,y \in X$ of $(x_n)_{n \in \mathbb{N}}$. Then for any $\epsilon  > 0$ there exist $N_1, N_2 \in \mathbb{N}$ such that $\norm{x_n - n} \leq \epsilon /2$ for all $n \geq N_1$, and $\norm{x_n -y } \leq  \epsilon / 2 $ for all $n \geq N_2$. Hence for all $n \geq \max \{N_1, N_2 \}$
+        
+        \begin{equation*}
+            \norm{x-y} = \norm{x- x_n + x_n-y} \leq \norm{x- x_n} + \norm{x_n-y} \leq \epsilon
+        \end{equation*}
+    
+    \item
+        By the reversed triangle inequality we have that 
+        \begin{equation*}
+            \abs{\norm{x_n} -  \norm{x}}  \leq \norm{x_n -x},
+        \end{equation*}
+        
+        and by assumption $\norm{x_n - x } \rightarrow 0$
+\end{enumerate}
+
+    
+\end{proof}
+
+
+
+
+
+
+
+
+
+\section{Open and Closed Sets}
+
+\begin{definition} {Open Set}
+
+A set \(U \) in a metric space \((M,d) \) is called an \textbf{open set} if U contains a neighborhood of each its points. In other words, U is an open set if, given \( x \in U \), there is some \( \epsilon > 0 \) such that \( B_{\epsilon} \subset U \). 
+
+\end{definition}
+
+
+\begin{proposition}
+
+For any \( x \in M \) and any \( \epsilon > 0 \) the open ball \( B_{\epsilon}(x) \) is an open set. 
+
+\end{proposition}
+
+\begin{proof}
+
+Let \( y \in B_{\epsilon}(x) \). Then \( d(x,y) < \epsilon \) and hence \( \delta = \epsilon -  d(x,y)  > 0\). We will show that \( B_{\delta}(y) \subset B_{\epsilon}(x)\). Indeed, if \( d(y,z) < \epsilon \), then, by the triangle equality, \( d(x,y)  \leq  d(x,y) + d(y,z) +  \epsilon = d(x,y) +  \epsilon - d(x,y) = \epsilon \). 
+
+\end{proof}
+
+
+\begin{definition} {Closed Set}
+
+
+\end{definition}
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+
