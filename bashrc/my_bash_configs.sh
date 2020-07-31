@@ -260,6 +260,7 @@ alias research="cd ~/research"
 alias math="cd ~/research/mathematics"
 alias mathc="cd ~/research/mathematics/complex_analysis"
 alias mathd="cd ~/research/mathematics/dynamic_systems"
+alias algdat="cd ~/research/computer_science/algdat"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
@@ -291,6 +292,8 @@ alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
 # vim
 alias texsnip='vim ~/.vim_runtime/sources_non_forked/vim-snippets/UltiSnips/tex.snippets'
 alias tex_template='cp ~/.linux_runtime/tex/template.tex .'
+
+
 
 
 #javascript
