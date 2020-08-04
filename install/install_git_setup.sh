@@ -20,17 +20,17 @@ function generate_ssh_key() {
     ssh-add
 }
 
-function set_git_credential() {
-    # Avoid passwords and stuff.
-    # Setup git credential
-    sudo apt-get install libsecret-1-0 libsecret-1-dev
-    sudo mkdir /usr/share/doc/git/contrib/credential/libsecret
-    sudo cp ~/.linux_runtime/install/Makefile /usr/share/doc/git/contrib/credential/libsecret/
-    sudo cp ~/.linux_runtime/install/git-credential-libsecret.c /usr/share/doc/git/contrib/credential/libsecret
-    cd /usr/share/doc/git/contrib/credential/libsecret
-    git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-    sudo make
-}
+#function set_git_credential() {
+#    # Avoid passwords and stuff.
+#    # Setup git credential
+#    sudo apt-get install libsecret-1-0 libsecret-1-dev
+#    sudo mkdir /usr/share/doc/git/contrib/credential/libsecret
+#    sudo cp ~/.linux_runtime/install/Makefile /usr/share/doc/git/contrib/credential/libsecret/
+#    sudo cp ~/.linux_runtime/install/git-credential-libsecret.c /usr/share/doc/git/contrib/credential/libsecret
+#    cd /usr/share/doc/git/contrib/credential/libsecret
+#    git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+#    sudo make
+#}
 
 
 sudo apt update
@@ -40,7 +40,7 @@ sudo apt upgrade
 sudo apt install -y vim git chromium-browser
 
 EMAIL="isakhammer@gmail.com"
-git config --global user.email $EMAIL
 generate_ssh_key $EMAIL
-set_git_credential
+git config --global user.email $EMAIL
+#set_git_credential
 
