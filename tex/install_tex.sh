@@ -7,6 +7,7 @@ sudo apt install rofi
 
 sudo apt install python3-pip
 sudo pip3 install inkscape-figures # Inkscape plugin (sudo is important)
+#sudo pip3 install unidecode
 
 sudo apt install latexmk #Compiler
 sudo apt-get install -y xdotool # for vimtex-zathura interface
