@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export VISUAL=vim;
+export EDITOR=vim;
+
 function install_plugin()  {
    cd ~/.vim_runtime/my_plugins
    ssh_key=$1
