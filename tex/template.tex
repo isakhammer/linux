@@ -13,6 +13,8 @@
 \usepackage{mathtools}
 \usepackage{enumerate} 
 \usepackage{tcolorbox}
+\usepackage{mdframed}
+
 
 % inscape-figures
 \usepackage{import}
@@ -27,36 +29,20 @@
 
 \pdfsuppresswarningpagegroup=1
 
+% Theorems
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{proposition}{Proposition}[section]
 
-
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
-\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
-
-%% Swap the definition of \abs* and \norm*, so that \abs
-%% and \norm resizes the size of the brackets, and the 
-%% starred version does not.
-\makeatletter
-\let\oldabs\abs
-\def\abs{\@ifstar{\oldabs}{\oldabs*}}
-%
-\let\oldnorm\norm
-\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
-\makeatother
-
+\newmdtheoremenv{theorem}{Theorem}
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 
-
 \begin{document}
-
-\begin{tcolorbox}
-  \textbf{Answer.} 
-\end{tcolorbox}
 \maketitle
+
+
 
 
 
