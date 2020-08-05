@@ -264,7 +264,7 @@ alias math="cd ~/research/mathematics"
 alias mathc="cd ~/research/mathematics/complex_analysis"
 alias mathd="cd ~/research/mathematics/dynamic_systems"
 alias algdat="cd ~/research/computer_science/algdat"
-alias linmet="research/mathematics/functional_analysis/linear-methods-TMA4145"
+alias linmet="cd ~/research/mathematics/functional_analysis/linear-methods-TMA4145"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
