@@ -265,6 +265,7 @@ alias mathc="cd ~/research/mathematics/complex_analysis"
 alias mathd="cd ~/research/mathematics/dynamic_systems"
 alias algdat="cd ~/research/computer_science/algdat"
 alias linmet="cd ~/research/mathematics/functional_analysis/linear-methods-TMA4145"
+alias nummet="cd ~/research/mathematics/numerical_analysis/TMA4215-Numerical-Maths"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
@@ -290,15 +291,9 @@ alias ohana="ssh ohana@129.241.64.225"
 
 alias unreal="cd ~/UnrealEngine/Engine/Binaries/Linux && ./UE4Editor"
 
-
-
-
 # vim
 alias texsnip='vim ~/.vim_runtime/sources_non_forked/vim-snippets/UltiSnips/tex.snippets'
 alias tex_template='cp ~/.linux_runtime/tex/template.tex .'
-
-
-
 
 #javascript
 alias npm_init="npm init"
