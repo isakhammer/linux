@@ -2,6 +2,7 @@
 
 export VISUAL=vim;
 export EDITOR=vim;
+setxkbmap -option caps:swapescape
 
 function install_plugin()  {
    cd ~/.vim_runtime/my_plugins
@@ -56,6 +57,10 @@ alias grepr="grep_recursive"
 alias sudo_upgrade="sudo apt-get upgrade"
 alias sudo_update="sudo apt-get update"
 alias update_browser="sudo update-alternatives --config x-www-browser"
+
+alias switch_caps_esc="setxkbmap -option caps:swapescape"
+
+alias bat="acpi -V"
 
 
 # executing and killing processes
@@ -119,6 +124,7 @@ alias video_editor="kdenlive"
 alias cad_editor="freecad"
 alias anydesk="anydesk"
 alias termdown="termdown"
+alias klavaro="klavaro"
 
 # Pdf managers
 alias oku="okular"
@@ -146,7 +152,6 @@ alias docker='sudo docker'
 alias docker_socket="sudo chmod 777 /var/run/docker.sock"
 
 function run_melodica()  {
-
   image_name="isakhammer/melodica:latest"
   xhost +local:root
   XSOCK=/tmp/.X11-unix
@@ -201,6 +206,7 @@ alias gc="git_commit" # custom function
 alias gce="git commit -a --allow-empty-message -m ''"
 alias gp="git push origin HEAD"
 alias gpu="git pull"
+alias sgg="set_git_global_user"
 
 # python
 alias p3="python3"
@@ -266,6 +272,7 @@ alias mathd="cd ~/research/mathematics/dynamic_systems"
 alias algdat="cd ~/research/computer_science/algdat"
 alias linmet="cd ~/research/mathematics/functional_analysis/linear-methods-TMA4145"
 alias nummet="cd ~/research/mathematics/numerical_analysis/TMA4215-Numerical-Maths"
+alias pde="cd ~/research/mathematics/pde"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
@@ -297,3 +304,6 @@ alias tex_template='cp ~/.linux_runtime/tex/template.tex .'
 
 #javascript
 alias npm_init="npm init"
+
+#pi
+alias ssh_pi="ssh pi@10.0.0.16"
