@@ -10,5 +10,5 @@ source ~/.linux_runtime/install/install_ubuntu_setup.sh
 ## Programs
 
 ### Zathura
-Invert colors by using <ctrl-r>
+Invert colors by using  ``` <ctrl-r> ```
 
