@@ -158,9 +158,24 @@ function run_melodica()  {
   docker run -it \
      -e DISPLAY=$DISPLAY \
       -v $XSOCK:$XSOCK \
+      -v $HOME/.ssh:/root/.ssh \
+      -v $HOME/rdv_pipeline:/root/catkin_rdv/src/rdv_pipeline \
        -v $HOME/.Xauthority:/root/.Xauthority \
+       --name melodica \
         --privileged \
         $image_name "$@"
+}
+
+function push_melodica()  {
+  docker push isakhammer/melodica:latest
+}
+
+function commit_melodica()  {
+  docker commit melodica isakhammer/melodica:latest
+}
+
+function rm_melodica() {
+  docker rm melodica
 }
 
 
@@ -267,12 +282,11 @@ alias hyp="cd ~/hypertrophy_project"
 # research shortcuts
 alias research="cd ~/research"
 alias math="cd ~/research/mathematics"
-alias mathc="cd ~/research/mathematics/complex_analysis"
-alias mathd="cd ~/research/mathematics/dynamic_systems"
-alias algdat="cd ~/research/computer_science/algdat"
-alias linmet="cd ~/research/mathematics/functional_analysis/linear-methods-TMA4145"
-alias nummet="cd ~/research/mathematics/numerical_analysis/TMA4215-Numerical-Maths"
-alias pde="cd ~/research/mathematics/pde"
+alias compl="cd ~/research/mathematics/complex_analysis"
+alias dyn="cd ~/research/mathematics/dynamic_systems"
+alias cs="cd ~/research/computer-science"
+alias func="cd ~/research/mathematics/functional-analysis"
+alias num="cd ~/research/mathematics/numerical-analysis"
 
 # idea shortcuts
 alias ideas="cd ~/ideas"
@@ -307,3 +321,4 @@ alias npm_init="npm init"
 
 #pi
 alias ssh_pi="ssh pi@10.0.0.16"
+alias tex_ignore="cp ~/.linux_runtime/tex/gitignore .gitignore"
