@@ -11,7 +11,6 @@ sudo pip3 install unidecode # Ultisnippets
 pip3 install Xlib
 sudo apt install rxvt-unicode
 
-
 sudo apt-get install -y xclip
 
 # Maybe switch to pdf latex?
