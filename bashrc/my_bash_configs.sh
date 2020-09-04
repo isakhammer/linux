@@ -133,7 +133,9 @@ alias mir="mirage"
 alias invert_color='xcalib -invert -alter'
 
 # File mangagers
-alias ran='ranger'
+# Stay in directory after quit
+alias ran='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 alias ran_custom='ranger --copy-config=all'
 alias ran_config='cd ~/.config/ranger'
 
@@ -160,6 +162,7 @@ function run_melodica()  {
       -v $XSOCK:$XSOCK \
       -v $HOME/.ssh:/root/.ssh \
       -v $HOME/rdv_pipeline:/root/catkin_rdv/src/rdv_pipeline \
+      -v $HOME/.linux_runtime:/root/.linux_runtime \
        -v $HOME/.Xauthority:/root/.Xauthority \
        --name melodica \
         --privileged \
@@ -322,3 +325,6 @@ alias npm_init="npm init"
 #pi
 alias ssh_pi="ssh pi@10.0.0.16"
 alias tex_ignore="cp ~/.linux_runtime/tex/gitignore .gitignore"
+
+#alias
+alias sim_planning="roslaunch rdv_launch simulator_planning.launch TD:=1 "
