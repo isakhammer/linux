@@ -24,7 +24,32 @@ function install_plugin()  {
 ########################
 
 # welcome text
-neofetch
+#neofetch
+
+echo "
+#  ██████   █████  ██ ██   ██    ██ 
+#  ██   ██ ██   ██ ██ ██    ██  ██  
+#  ██   ██ ███████ ██ ██     ████  
+#  ██   ██ ██   ██ ██ ██      ██  
+#  ██████  ██   ██ ██ ███████ ██ 
+#                                
+#
+#  ███████ ████████ ██████  ██    ██  ██████   ██████  ██      ███████ ███████ 
+#  ██         ██    ██   ██ ██    ██ ██       ██       ██      ██      ██      
+#  ███████    ██    ██████  ██    ██ ██   ███ ██   ███ ██      █████   ███████ 
+#       ██    ██    ██   ██ ██    ██ ██    ██ ██    ██ ██      ██           ██ 
+#  ███████    ██    ██   ██  ██████   ██████   ██████  ███████ ███████ ███████ 
+#                                                                              
+#
+# What is the arrangement of Markov Chains?
+#
+# How do I write 2norm of a <p1, p2> inner product?
+#
+# Scaling procedure, how does it work?
+#
+# What is the real PDE struggles?
+"
+
 
 # vim mode in terminal
 set -o vi
@@ -134,7 +159,8 @@ alias invert_color='xcalib -invert -alter'
 
 # File mangagers
 # Stay in directory after quit
-alias ran='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias ran='ranger'
 
 alias ran_custom='ranger --copy-config=all'
 alias ran_config='cd ~/.config/ranger'
@@ -151,7 +177,7 @@ alias chrome="chromium-browser"
 
 # docker
 alias docker='sudo docker'
-alias docker_socket="sudo chmod 777 /var/run/docker.sock"
+alias docker_socker='sudo chmod 777 /var/run/docker.sock'
 
 function run_melodica()  {
   image_name="isakhammer/melodica:latest"
@@ -168,6 +194,18 @@ function run_melodica()  {
         --privileged \
         $image_name "$@"
 }
+
+function run_jupyter(){
+  docker run -p 8888:8888\
+    -v $(pwd)/:/root/src \
+    notebook
+}
+
+function cp_jupyter_docker(){
+  cp ~/.linux_runtime/jupyter/Dockerfile-src ~/.linux_runtime/jupyter/run-container.sh .
+}
+
+
 
 function push_melodica()  {
   docker push isakhammer/melodica:latest
