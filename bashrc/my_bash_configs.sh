@@ -41,6 +41,16 @@ echo "
 #  ███████    ██    ██   ██  ██████   ██████   ██████  ███████ ███████ ███████ 
 #                                                                              
 #
+#
+#
+# For a matrix Pij
+#   ----------> j - columns
+#   |
+#   |
+#   |
+#  \|/
+#   i -rows
+#
 # What is the arrangement of Markov Chains?
 #
 # How do I write 2norm of a <p1, p2> inner product?
@@ -160,7 +170,7 @@ alias invert_color='xcalib -invert -alter'
 # File mangagers
 # Stay in directory after quit
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias ran='ranger'
+#alias ran='ranger'
 
 alias ran_custom='ranger --copy-config=all'
 alias ran_config='cd ~/.config/ranger'
@@ -177,7 +187,7 @@ alias chrome="chromium-browser"
 
 # docker
 alias docker='sudo docker'
-alias docker_socker='sudo chmod 777 /var/run/docker.sock'
+alias docker_socket='sudo chmod 777 /var/run/docker.sock'
 
 function run_melodica()  {
   image_name="isakhammer/melodica:latest"
