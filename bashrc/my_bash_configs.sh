@@ -331,7 +331,7 @@ alias control_skidpad="roslaunch rdv_launch simulator_control.launch SKIDPAD:=1 
 alias hyp="cd ~/hypertrophy_project"
 
 # research shortcuts
-alias research="cd ~/research"
+alias rr="cd ~/research; ranger"
 alias math="cd ~/research/mathematics"
 alias stat="cd ~/research/mathematics/statistics"
 alias dyn="cd ~/research/mathematics/dynamic-systems"
