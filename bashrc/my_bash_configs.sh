@@ -209,7 +209,7 @@ function run_python()  {
   image_name="isakhammer/python:latest"
   xhost +local:root
   XSOCK=/tmp/.X11-unix
-  docker run -it \
+  docker run -it --rm \
      -e DISPLAY=$DISPLAY \
       -v $(pwd)/:/root/src \
       -v $XSOCK:$XSOCK \
