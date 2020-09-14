@@ -43,7 +43,7 @@ echo "
 #
 #
 #
-# For a matrix Pij
+# For a matrix Pij => Probability from state i) to state j)
 #   ----------> j - columns
 #   |
 #   |
@@ -201,6 +201,21 @@ function run_melodica()  {
       -v $HOME/.linux_runtime:/root/.linux_runtime \
        -v $HOME/.Xauthority:/root/.Xauthority \
        --name melodica \
+        --privileged \
+        $image_name "$@"
+}
+
+function run_python()  {
+  image_name="isakhammer/python:latest"
+  xhost +local:root
+  XSOCK=/tmp/.X11-unix
+  docker run -it \
+     -e DISPLAY=$DISPLAY \
+      -v $(pwd)/:/root/src \
+      -v $XSOCK:$XSOCK \
+      -v $HOME/.ssh:/root/.ssh \
+       -v $HOME/.Xauthority:/root/.Xauthority \
+       --name python \
         --privileged \
         $image_name "$@"
 }
