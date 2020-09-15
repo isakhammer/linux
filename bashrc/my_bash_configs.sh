@@ -221,9 +221,10 @@ function run_python()  {
 }
 
 function run_jupyter(){
+  image_name="isakhammer/jupyter-notebook:latest"
   docker run -p 8888:8888\
     -v $(pwd)/:/root/src \
-    notebook
+    $image_name
 }
 
 function cp_jupyter_docker(){
