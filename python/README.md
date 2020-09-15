@@ -1,4 +1,3 @@
-# Usage
 
 ## Why
 Because python and jupyter-notebook has bloated environment and I did not get virtualenv to work properly.
