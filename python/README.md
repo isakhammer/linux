@@ -7,15 +7,15 @@ Because python and jupyter-notebook has bloated environment and I did not get vi
 Go to your project folder and run these commands.
 
 ### For jupyter notebook
-'''
+```
 image_name="isakhammer/jupyter-notebook:latest"
 docker run -p 8888:8888\
  -v $(pwd)/:/root/src \
  $image_name
-'''
+```
 
 ### For normal python environment
-'''
+```
 image_name="isakhammer/python:latest"
 xhost +local:root
 XSOCK=/tmp/.X11-unix
@@ -28,4 +28,8 @@ docker run -it --rm \
      --name python \
       --privileged \
       $image_name "$@"
-'''
+```
+
+### To update images
+Run jupyter and python update scripts.
+Push your stuff to isakhammer/jupyter-notebook and isakhammer/python
