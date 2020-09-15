@@ -3,16 +3,29 @@
 ## Why
 Because python and jupyter-notebook has bloated environment and I did not get virtualenv to work properly.
 
-## Make an requirements.txt file for your python script.
+## How
+Go to your project folder and run these commands.
 
-## Build the jupyter-image
-Run 'bash update-jupyter.sh' to make a jupyter docker image and push it to the docker hub.
+### For jupyter notebook
+'''
+image_name="isakhammer/jupyter-notebook:latest"
+docker run -p 8888:8888\
+ -v $(pwd)/:/root/src \
+ $image_name
+'''
 
-## Copy the template to your directory
-bash 'cp ~/.linux_runtime/jupyter/Dockerfile-src ~/.linux_runtime/jupyter/run-container.sh .'
-
-## Run the dockerfile
-' bash run-container.sh' will first build the template Dockerfile and install requirements. Second, it will run the image with mounted volume to your source files. You can then open the given link and edit your jupyter file as normal.
-
-
-
+### For normal python environment
+'''
+image_name="isakhammer/python:latest"
+xhost +local:root
+XSOCK=/tmp/.X11-unix
+docker run -it --rm \
+   -e DISPLAY=$DISPLAY \
+    -v $(pwd)/:/root/src \
+    -v $XSOCK:$XSOCK \
+    -v $HOME/.ssh:/root/.ssh \
+     -v $HOME/.Xauthority:/root/.Xauthority \
+     --name python \
+      --privileged \
+      $image_name "$@"
+'''
