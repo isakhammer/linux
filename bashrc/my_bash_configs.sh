@@ -27,37 +27,36 @@ function install_plugin()  {
 #neofetch
 
 echo "
-#  ██████   █████  ██ ██   ██    ██ 
-#  ██   ██ ██   ██ ██ ██    ██  ██  
-#  ██   ██ ███████ ██ ██     ████  
-#  ██   ██ ██   ██ ██ ██      ██  
-#  ██████  ██   ██ ██ ███████ ██ 
-#                                
-#
-#  ███████ ████████ ██████  ██    ██  ██████   ██████  ██      ███████ ███████ 
-#  ██         ██    ██   ██ ██    ██ ██       ██       ██      ██      ██      
-#  ███████    ██    ██████  ██    ██ ██   ███ ██   ███ ██      █████   ███████ 
-#       ██    ██    ██   ██ ██    ██ ██    ██ ██    ██ ██      ██           ██ 
-#  ███████    ██    ██   ██  ██████   ██████   ██████  ███████ ███████ ███████ 
-#                                                                              
-#
-#
-#
-# For a matrix Pij => Probability from state i) to state j)
-#   ----------> j - columns
-#   |
-#   |
-#   |
-#  \|/
-#   i -rows
-#
-# What is the arrangement of Markov Chains?
-#
-# How do I write 2norm of a <p1, p2> inner product?
-#
-# Scaling procedure, how does it work?
-#
-# What is the real PDE struggles?
+  ██████   █████  ██ ██   ██    ██ 
+  ██   ██ ██   ██ ██ ██    ██  ██  
+  ██   ██ ███████ ██ ██     ████  
+  ██   ██ ██   ██ ██ ██      ██  
+  ██████  ██   ██ ██ ███████ ██ 
+                                
+
+  ███████ ████████ ██████  ██    ██  ██████   ██████  ██      ███████ ███████ 
+  ██         ██    ██   ██ ██    ██ ██       ██       ██      ██      ██      
+  ███████    ██    ██████  ██    ██ ██   ███ ██   ███ ██      █████   ███████ 
+       ██    ██    ██   ██ ██    ██ ██    ██ ██    ██ ██      ██           ██ 
+  ███████    ██    ██   ██  ██████   ██████   ██████  ███████ ███████ ███████ 
+                                                                              
+
+
+
+ For a matrix Pij => Probability from state i) to state j)
+   ----------> j - columns
+   |
+   |
+   |
+  \|/
+   i -rows
+
+
+   Plan:
+   - Do control questions for numerical analysis
+
+   - Manage to formulate the task 1bcd in the stochmod project. -> Maybe start the programming part.
+
 "
 
 
