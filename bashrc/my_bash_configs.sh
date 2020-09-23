@@ -391,3 +391,35 @@ alias tex_ignore="cp ~/.linux_runtime/tex/gitignore .gitignore"
 
 #alias
 alias sim_planning="roslaunch rdv_launch simulator_planning.launch TD:=1 "
+
+
+
+# SCRIPTS
+
+function inside_time_interval(){
+  #$1: current time
+  #$2: lower limit
+  #$3: upper limit
+  if [[ "$1" -ge "$2" ]] && [[ "$3" -gt "$1" ]]; then
+    INSIDE=0
+  fi
+}
+
+# Turn off internet between 10-12, 13-15, 15-17, 18-20
+# Recall 1 is false in bash
+INSIDE=1
+t=$(date +%H)
+t=18
+inside_time_interval t 10 12
+inside_time_interval t 13 15
+inside_time_interval t 16 18
+inside_time_interval t 19 21
+if [ "$INSIDE" -eq "0" ]
+then
+  echo "WIFI IS OFF"
+  nmcli radio wifi off
+else
+  echo "WIFI IS ON"
+  nmcli radio wifi on
+fi
+
